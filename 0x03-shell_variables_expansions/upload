@@ -1,0 +1,13 @@
+#!/bin/bash
+
+directory="./"  
+
+for file in *; do
+    commit_message="${file%.*}"
+
+    git add "$file"
+    git commit -m "$commit_message"
+done
+
+
+git push 
